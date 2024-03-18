@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile</title>
+</head>
+<body>
+    <h1>Admin Profile</h1>
+
+    <ul class="navbar">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="AddBooks.html">Add Books</a></li>
+        <li><a href="Available-books.html">View Available Books</a></li>
+        <li><a href="EditBook.html">Edit Books</a></li>
+    </ul>
+
+    <div class="container">
+        <div>
+            <h2>Admin Name: Admin's Full Name</h2>
+            <p>Email: admin@example.com</p>
+            <p>Role: Admin</p>
+            <p>Access Level: Full Access</p>
+            <p>Joined: January 1, 2022</p>
+            <p>Location: Admin's Location</p>
+        </div>
+    </div>
+    <div class="profile-update">
+        <h3>Update Your Profile</h3>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" class="form-control" placeholder="Confirm your password">
+            </div>
+            <button type="submit" class="btn btn-primary">Update Profile</button>
+        </form>
+    </div>
+
+    <h3>Add New Book</h3>
+    <a href="AddBooks.html">Add New Book</a>
+    
+    <!-- Edit Book Details Form -->
+    <h3>Edit Book Details</h3>
+    <a href="EditBook.html">Edit Book</a>
+    
+
+    <!-- Delete Book Form -->
+    <h3>Delete Book</h3>
+    <form>
+        <label for="delete_book_id">Select Book to Delete:</label>
+        <select id="delete_book_id" name="delete_book_id">
+            <option value="1">Book Name 1</option>
+            <option value="2">Book Name 2</option>
+        </select><br><br>
+
+        <input type="submit" value="Delete Book">
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+</head>
+<body>
+    <h1>User Profile</h1>
+
+    <ul class="navbar">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Browse-books.html">Search</a></li>
+        <li><a href="Available-books.html">View Available Books</a></li>
+        <li><a href="Borrow.html">Borrow Books</a></li>
+        <li><a href="Book-details.html">View Books Details</a></li>
+    </ul>
+
+    <div class="container">
+        <div>
+            <h2>User Name: User's Full Name</h2>
+            <p>Email: user@example.com</p>
+            <p>Membership Type: Premium</p>
+            <p>payment method: card</p>
+            <p>Joined: January 1, 2022</p>
+            <p>Location: User's Location</p>
+        </div>
+    </div>
+    <div class="profile-update">
+        <h3>Update Your Profile</h3>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" class="form-control" placeholder="Confirm your password">
+            </div>
+            <button type="submit" class="btn btn-primary">Update Profile</button>
+        </form>
+    </div>
+
+    <h3>Borrowed Books</h3>
+    <ul>
+        <li>
+            <p><strong>Title:</strong> Book Title 1</p>
+            <p><strong>Author:</strong> Author Name 1</p>
+            <p><strong>Borrowed on:</strong> January 10, 2022</p>
+        </li>
+        <li>
+            <p><strong>Title:</strong> Book Title 2</p>
+            <p><strong>Author:</strong> Author Name 2</p>
+            <p><strong>Borrowed on:</strong> February 5, 2022</p>
+        </li>
+    </ul>
+</body>
+</html>

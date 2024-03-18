@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <h2>Create Account</h2>
+    <form action="register.php" method="get">
+        <div>
+            <label for="fname">Full Name:</label><br>
+            <input type="text" id="fname" placeholder="Enter your full name" required>
+        </div>
+        <div>
+            <label for="un">Username:</label><br>
+            <input type="text" id="un" placeholder="Enter your username" required>
+        </div>
+        <div>
+            <label for="em">Email:</label><br>
+            <input type="email" id="em" placeholder="Enter a valid email" required>
+        </div>
+        <div>
+            <label for="pass">Password:</label><br>
+            <input type="password" id="pass" placeholder="Enter a strong password" maxlength="30" minlength="10">
+        </div>
+        <div>
+            <label for="cpass">Confirm Password:</label><br>
+            <input type="password" id="cpass" placeholder="Confirm your password">
+        </div>
+        <div>
+            <label for="role">Select Role:</label><br>
+            <select id="role" name="role" required>
+                <option value="admin">User</option>
+                <option value="user">Admin</option>
+            </select><br><br>
+        </div>
+        <div>
+            <input type="submit" value="Sign Up">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+
+</html>
