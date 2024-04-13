@@ -39,7 +39,7 @@ h2, input {
 
 h2 {
     margin-left: -700px;
-    background-color:#e5f0f3; 
+    background-color:#FAF0E6; 
     color:rgb(19, 8, 8);
     font-size: 30px;
 }
@@ -50,7 +50,7 @@ h4 {
 
 .block {
     text-align: center;
-    background-color:#e5f0f3; 
+    background-color:#FAF0E6; 
 }
 
 
@@ -81,7 +81,7 @@ input {
     align-items: center; 
 }
 .Tbooks{
-    background-color: #e5f0f3 ;
+    background-color: #FAF0E6;
 }
 
 .library-info h4 {
