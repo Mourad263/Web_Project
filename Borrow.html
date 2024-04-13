@@ -3,17 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Borrow a Book</title>
+    <link rel="stylesheet" href="borrow.css">
+
    
 </head>
 <body>
+
+    <div>
+        <h1>Welcome to Hayah online Library !</h1>
+        <h2>We're delighted to have you here, Below are the borrowing instructions for our library</h2>
+        <ul class="navbar">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Browse-books.html">Search</a></li>
+            <li><a href="Available-books.html">View Available Books</a></li>
+            <li><a href="Borrow.html">Borrow Books</a></li>
+            <li><a href="Book-details.html">View Books Details</a></li>
+        </ul>
+    </div>
+    <div class="library-info">
+        <h1>Borrowing Instructions for Hayah online Library</h1>
+        <ol>
+            <li>Sign In or Create an Account: If you are a registered user, click on <a href="Login.html">login</a>, If you are a new user, click on <a href="SignUp.html">SignUp</a>.</li>
+            <li>Browse Books: Use the search bar or browse through categories to find a book you want to borrow.</li>
+            <li>Borrow a Book: Click on the book's title or cover image to view its details. Click the "Borrow" button to borrow the book.</li>
+            <li>Confirm Borrowing: Review the borrowing details and click "Confirm Borrow" to proceed.</li>
+            <li>Enjoy Your Book: Once the borrowing process is complete, you can start reading your borrowed book online.</li>
+            <li>Return the Book: To return the book, go to your account settings and select the book you want to return. Click the "Return" button to complete the return process.</li>
+        </ol>
+    </div>
     <div class="container">
-        <h1>Borrow a Book</h1>
-
-        <div class="search-box">
-            <input type="text" id="bookSearch" placeholder="Search for books...">
-            <button type="button">Search</button>
-        </div>
-
         <form class="borrow-form" id="borrowForm">
             <h2>Borrow Form</h2>
             <div class="form-group">
@@ -42,5 +60,40 @@
         </form>
     </div>
 
+    <div class="Tbooks">
+        <h2>You can also borrow these recommended books</h2>
+        <div class="book">
+            <img src="book7.jpg" alt="Book 1">
+            <p>Alice's Adventures in Wonderland</p>
+            <a href="Borrow.html" class="button-link">
+                <button class="button">Borrow</button>
+            </a>
+        </div>
+        <div class="book">
+            <img src="book8.png" alt="Book 2">
+            <p>Harry Potter</p>
+            <a href="Borrow.html" class="button-link">
+                <button class="button">Borrow</button>
+            </a>
+        </div>
+        <div class="book">
+            <img src="book9.jpg" alt="Book 2">
+            <p>Notes From a Dead House</p>
+            <a href="Borrow.html" class="button-link">
+                <button class="button">Borrow</button>
+            </a>
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; Copyright 2024 Hayah Library - All rights reserved</p>
+            <ul class="footer-links">
+                <li><a href="/privacy policy">Privacy Policy</a></li>
+                <li><a href="/terms-of-service">Terms of Service</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
