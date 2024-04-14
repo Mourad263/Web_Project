@@ -43,20 +43,21 @@ h2, input {
 }
 
 h2 {
-    margin-left: -700px;
+    margin-left: 40px;
     background-color:#FAF0E6; 
     color:rgb(19, 8, 8);
     font-size: 30px;
 }
 h4 {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 
 .block {
     text-align: center;
-    background-color:#FAF0E6; 
+    background-color:#FAF0E6;
 }
+
 
 
 input {
@@ -64,12 +65,12 @@ input {
     padding: 10px;
     background-color: #F5F5F5;
     width: 20%;
-    margin-right: 940px;
+    margin-right: 50px;
 }
 .search-button {
-    width: 5%;
+    width: 10%;
     position: absolute;
-    margin-left: -940px;
+    margin-left: -50px;
     background-color: #333;
     padding: 10px;
     color: #f2f2f2;
@@ -83,28 +84,38 @@ input {
     background-color: #ffffff;
     padding: 20px;
     display: flex; 
-    align-items: center; 
+    align-items: right; 
+}
+
+.library-info h4 {
+    font-size: 40px;
+    margin: 0; 
+}
+
+.library-info ul {
+    margin-top: 100px;
+    margin-left: -500px; 
 }
 .Tbooks{
     background-color: #FAF0E6;
 }
+.Tbooks {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
 
-.library-info h4 {
-    font-size: 30px;
-    margin-top: -120px; 
-    margin-right: -370px;
+.book {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    text-align: center;
 }
 
 .book img {
-    width: 200px; 
-    height: auto; 
+    max-width: 100px;
+    height: 150px;
 }
-.book {
-    margin: 5px; 
-    padding: 10px;
-    text-align: center; 
-}
-
 
 
 footer {
