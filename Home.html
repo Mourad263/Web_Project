@@ -10,13 +10,7 @@
     <h1 class="f">Hayah
     </h1>
     <h3 class="f">online library</h3>
-    <div class="navbar">
-        <a href="#" id="profile">Profile</a>
-        <a href="Home.html">Home</a>
-        <a href="Browse-books.html">Browse</a>
-        <a href="SignUp.html">Sign Up</a>
-        <a href="Login.html">Log In</a>
-    </div>
+    <div id="navbar-placeholder"></div>
     <div class="block">
         <h2>Reading gives one person more than one life</h2>
         <div class="search-form">
@@ -92,6 +86,27 @@
             </ul>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var Par = new URLSearchParams(window.location.search);
+            var role = Par.get('role');
+            var navbarPlaceholder = document.getElementById("navbar-placeholder");
+    
+            var navbarContent;
+            if (role === "admin") {
+                navbarContent = '<ul class="navbar"><li><a href="AdminProfile.html">Profile</a></li><li><a href="Home.html">Home</a></li><li><a href="AddBooks.html">Add Books</a></li><li><a href="Available-books.html">View Available Books</a></li><li><a href="EditBook.html">Edit Books</a></li></ul>';
+            } else if (role === "user") {
+                navbarContent = '<ul class="navbar"><li><a href="User-profile.html">Profile</a></li><li><a href="Home.html">Home</a></li><li><a href="Browse-books.html">Search</a></li><li><a href="Available-books.html">View Available Books</a></li><li><a href="Borrow.html">Borrow Books</a></li><li><a href="Book-details.html">View Books Details</a></li></ul>';
+            } else {
+                navbarContent = '<ul class="navbar"></li><li><a href="Home.html">Home</a></li><li><a href="Browse-books.html">Browse</a></li><li><a href="SignUp.html">Sign Up</a></li><li><a href="Login.html">Log In</a></li></ul>';
+            }
+    
+            navbarPlaceholder.innerHTML = navbarContent;
+        });
+    </script>
+
+
+    
 
 
 
