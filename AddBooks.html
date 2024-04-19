@@ -3,37 +3,43 @@
 
 <head>
     <title>Add Books</title>
+    <link rel="stylesheet" href="AddBooksStyle.css">
+    <script src="AddBooks.js"></script>
 </head>
 
 <body>
-    <h2>Add New Book</h2>
-    <div>
-        <label for="id">Book ID::</label><br>
-        <input type="text" id="id" placeholder="Enter a unique id " required>
-    </div>
-    <div><label for="bname">Book Name:</label><br>
-        <input type="text" id="bname" placeholder="Enter the book name" required>
-    </div>
-    <div> <label for="ba">Book Author:</label><br>
-        <input type="text" id="ba" placeholder="Enter name" required>
-    </div>
-    <div><label for="cat">Book Category:</label><br>
-        <select id="category" name="category">
-            <option value="fiction">Fiction</option>
-            <option value="classic">Classic</option>
-            <option value="mysteryandcrime">Mystery and Crime</option>
-            <option value="fantasy">Fantasy</option>
-            <option value="romance">Romance</option>
-            <option value="history">History</option>
-        </select>
-    </div>
-    <div><label for="des">Book Description (Optional):</label><br>
-        <textarea id="des" placeholder="Enter description"></textarea>
-    </div>
-    <div>
-        <input type="submit" value="Save">
-        <input type="reset" value="Reset">
-    </div>
+    <h1>Add New Book</h1>
+    <form onsubmit="return validateForm()">
+        <div>
+
+            <label for="id">Book ID:</label><br>
+            <input type="text" id="id" placeholder="Enter a unique id "><br>
+
+            <label for="bname">Book Name:</label><br>
+            <input type="text" id="bname" placeholder="Enter the book name"><br>
+
+            <label for="ba">Book Author:</label><br>
+            <input type="text" id="ba" placeholder="Enter name"><br>
+
+            <label for="cat">Book Category:</label><br>
+            <select id="category" name="category">
+                <option value="fiction">Fiction</option>
+                <option value="classic">Classic</option>
+                <option value="mysteryandcrime">Mystery and Crime</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="romance">Romance</option>
+                <option value="history">History</option>
+            </select><br>
+
+            <label for="des">Book Description (Optional):</label><br>
+            <textarea id="des" placeholder="Enter description"></textarea><br>
+
+
+            <input type="submit" value="Save" onblur="submitForm()">
+            <input type="reset" value="Reset">
+
+        </div>
+    </form>
 </body>
 
 </html>
