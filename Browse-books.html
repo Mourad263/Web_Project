@@ -1,12 +1,15 @@
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="browse book.css">
     <title>Search</title>
 </head>
 <body>
     <h1>Welcome to Our Online Library</h1>
-    
+    <form>
+    <label for="search"><strong>search:</strong></label>
+    <input type="text" id="search" name="search" placeholder="Explore Our Library">
+    <input type="submit" value="Search">
     <h2>Available Books</h2>
     <ul>
         <li><strong>Title:</strong> Book 1</li>
@@ -53,12 +56,7 @@
             <button type="submit" name="action" value="select">Select</button>
         
     </ul>
-    
-    <h2>Search Books</h2>
-    <form>
-        <label for="search">Search:</label>
-        <input type="text" id="search" name="search" placeholder="Explore Our Library">
-        <input type="submit" value="Search">
     </form>
+    
 </body>
 </html>
