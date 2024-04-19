@@ -1,0 +1,49 @@
+body {
+    font-family: Arial;
+    background-image: url('librarybackground.jpeg');
+    background-size: cover;
+    background-position: unset;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+
+form {
+    background: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 60px;
+    border-style: solid;
+    border-width: medium;
+    border-radius: 8px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: solid;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    width: 49%;
+    color: white;
+    background-color: blue;
+    font-size: 16;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #45a049;
+}
