@@ -1,0 +1,60 @@
+body {
+    font-family: Arial;
+    background-image: url('pexels-pixabay-159711.jpg');
+    background-size: cover;
+    background-position: unset;
+}
+    
+h2 {
+    color: white;
+    text-align: center;
+}
+label {
+    font-weight: bold;
+}
+form {
+
+    margin: 0 auto ;
+    background: rgba(255, 255, 255, 0.5);
+    max-width: 300px;
+    border-radius: 5px;
+    padding: 20px;
+}
+input[type="text"],
+input[type="password"],
+select {
+    margin: 10px 0 ;
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: solid;
+}
+a {
+    color: brown;
+    text-decoration: none;
+}
+input[type="submit"],
+input[type="reset"] {
+    margin: 8px 0;
+    border-radius: 5px;
+    width: 49%;
+    font-size: 16px;
+    border: none;
+    padding: 15px 20px;
+    color: white;
+    background-color: blue;
+
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #45a049;
+}
+p {
+    margin-top: 10px;
+}
+
+
+
+
+    
+
