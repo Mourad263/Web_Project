@@ -26,12 +26,46 @@ function addBook() {
         let availableBooks = JSON.parse(localStorage.getItem('availableBooks')) || [];
         availableBooks.push(book);
         localStorage.setItem('availableBooks', JSON.stringify(availableBooks));
-    } 
+    }
 }
 
-function displayBooks(books = library) {
+function editBook(bookId) {
+    const book = library.find(book => book.ID === bookId);
+    if (!book) {
+        console.log('Book not found.');
+        return;
+    }
+
+    const newName = prompt('Enter new name:', book.Name);
+    const newAuthor = prompt('Enter new author:', book.author);
+    const newCategory = prompt('Enter new category:', book.Category);
+    const newDescription = prompt('Enter new description:', book.Description);
+    const isAvailable = confirm('Is the book available?');
+
+    if (newName !== null && newAuthor !== null && newCategory !== null && newDescription !== null) {
+        book.Name = newName;
+        book.author = newAuthor;
+        book.Category = newCategory;
+        book.Description = newDescription;
+        book.isAvailable = isAvailable;
+
+        displayBooks();
+    }
+}
+
+function deleteBook(bookId) {
+    const index = library.findIndex(book => book.ID === bookId);
+    if (index !== -1) {
+        library.splice(index, 1);
+        displayBooks();
+    } else {
+        console.log('Book not found.');
+    }
+}
+
+function displayBooks() {
     const bookList = document.getElementById("bookList");
-    bookList.innerHTML = books.map(book => `
+    bookList.innerHTML = library.map(book => `
         <tr>
             <td>${book.ID}</td>
             <td>${book.Name}</td>
@@ -39,6 +73,8 @@ function displayBooks(books = library) {
             <td>${book.Category}</td>
             <td>${book.Description}</td>
             <td>${book.isAvailable ? "Yes" : "No"}</td>
+            <td><button onclick="editBook('${book.ID}')">Edit</button></td>
+            <td><button onclick="deleteBook('${book.ID}')">Delete</button></td>
         </tr>
     `).join("");
 }
