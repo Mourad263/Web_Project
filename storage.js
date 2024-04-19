@@ -11,14 +11,22 @@ class Book {
 const library = [];
 
 function addBook() {
-    const ID = document.getElementById("id").value;
-    const Name = document.getElementById("bname").value;
-    const author = document.getElementById("ba").value;
-    const Category = document.getElementById("category").value;
-    const Description = document.getElementById("des").value;
-    const book = new Book(ID, Name, author, Category, Description);
+    var ID = document.getElementById("id").value;
+    var Name = document.getElementById("bname").value;
+    var author = document.getElementById("ba").value;
+    var Category = document.getElementById("category").value;
+    var Description = document.getElementById("des").value;
+    var isAvailable = document.getElementById("available").checked;
+    var book = new Book(ID, Name, author, Category, Description);
+    book.isAvailable = isAvailable;
     library.push(book);
     displayBooks();
+
+    if (isAvailable) {
+        let availableBooks = JSON.parse(localStorage.getItem('availableBooks')) || [];
+        availableBooks.push(book);
+        localStorage.setItem('availableBooks', JSON.stringify(availableBooks));
+    } 
 }
 
 function displayBooks(books = library) {
@@ -30,6 +38,11 @@ function displayBooks(books = library) {
             <td>${book.author}</td>
             <td>${book.Category}</td>
             <td>${book.Description}</td>
+            <td>${book.isAvailable ? "Yes" : "No"}</td>
         </tr>
     `).join("");
 }
+
+
+
+

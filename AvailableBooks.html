@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="storage.js"></script>
+    <title>Available Books</title>
+</head>
+<body>
+    <h2>Available Books</h2>
+    <table id="availableBookList" border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Available</th>
+        </tr>
+    </table>
+    <script>
+        let availableBooks = JSON.parse(localStorage.getItem('availableBooks')) || [];
+        const bookList = document.getElementById("availableBookList");
+        bookList.innerHTML = availableBooks.map(book => `
+            <tr>
+                <td>${book.ID}</td>
+                <td>${book.Name}</td>
+                <td>${book.author}</td>
+                <td>${book.Category}</td>
+                <td>${book.Description}</td>
+                <td>${book.isAvailable ? "Yes" : "No"}</td>
+            </tr>
+        `).join("");
+    </script>
+
+</body>
+</html>
