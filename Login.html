@@ -1,28 +1,20 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="log in.css">
+    <script src ="log in.js"></script>
     <title>Login Page</title>
-    <script>
-        function ToHome() {
-            var role = document.getElementById("role").value;
-            if (role === "admin") {
-                window.location.href = "Home.html?role=admin";
-            } else if (role === "user") {
-                window.location.href = "Home.html?role=user";
-            }
-            return false;
-        }
-    </script>
-
 </head>
 <body>
-    <h2>Login Page</h2>
-    <form onsubmit="return ToHome()">
+    <h2>Log In</h2>
+    <form onsubmit="return validation()">
+    <form action="login.php" method="post" >
         <label for="username">Username:</label>
         <br>
         <input type="text" id="username" name="username" required placeholder="Enter your Name">
-
+        
         <br>
 
         <label for="password">Password:</label>
@@ -41,9 +33,13 @@
         </select>
 
         <br>
+        
 
         <input type="checkbox" id="remember" name="remember">
         <label for="remember">Remember Me</label>
+
+        
+        
 
         <a href="forgot_password.php">Forgot Password?</a>
 
@@ -55,7 +51,10 @@
 
         <input type="submit" value="Login">
         <input type="reset" value="Reset">
+
     </form>
+    </form> 
+
+
 </body>
 </html>
-
