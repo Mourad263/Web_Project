@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+    <script src="storage.js"></script>
     <title>Add Books</title>
     <link rel="stylesheet" href="AddBooksStyle.css">
     <script src="AddBooks.js"></script>
 </head>
-
 <body>
-    <h1>Add New Book</h1>
-    <form onsubmit="return validateForm()">
-        <div>
+    <h2>Add Book</h2>
+    <form onsubmit="addBook(); return false;">
+        <label for="id">ID:</label><br>
+        <input type="text" id="id" placeholder="Enter a unique id "><br>
 
-            <label for="id">Book ID:</label><br>
-            <input type="text" id="id" placeholder="Enter a unique id "><br>
+        <label for="bname"> Name:</label><br>
+        <input type="text" id="bname" placeholder="Enter the book name"><br>
 
-            <label for="bname">Book Name:</label><br>
-            <input type="text" id="bname" placeholder="Enter the book name"><br>
+        <label for="ba"> Author:</label><br>
+        <input type="text" id="ba" placeholder="Enter name"><br>
 
-            <label for="ba">Book Author:</label><br>
-            <input type="text" id="ba" placeholder="Enter name"><br>
+        <label for="cat">Category:</label><br>
+        <select id="category" name="category">
+            <option value="fiction">Fiction</option>
+            <option value="classic">Classic</option>
+            <option value="mysteryandcrime">Mystery and Crime</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="romance">Romance</option>
+            <option value="history">History</option>
+        </select><br>
 
-            <label for="cat">Book Category:</label><br>
-            <select id="category" name="category">
-                <option value="fiction">Fiction</option>
-                <option value="classic">Classic</option>
-                <option value="mysteryandcrime">Mystery and Crime</option>
-                <option value="fantasy">Fantasy</option>
-                <option value="romance">Romance</option>
-                <option value="history">History</option>
-            </select><br>
-
-            <label for="des">Book Description (Optional):</label><br>
-            <textarea id="des" placeholder="Enter description"></textarea><br>
+        <label for="des">Description (Optional):</label><br>
+        <textarea id="des" placeholder="Enter description"></textarea><br>
 
 
-            <input type="submit" value="Save" onblur="submitForm()">
-            <input type="reset" value="Reset">
-
-        </div>
+        <input type="submit" value="Save" onblur="submitForm()">
+        <input type="reset" value="Reset">
+      
     </form>
-</body>
 
+    
+    <h2>Books</h2>
+    <table id="bookList" border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Description</th>
+        </tr>
+    </table>
+
+</body>
 </html>
+
